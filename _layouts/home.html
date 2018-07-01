@@ -2,7 +2,7 @@
 <html>
 
     {% include head.html %}
-	<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/home.css">
+	<link rel="stylesheet" type="text/css" href="{{ "assets/css/home.css" | absolute_url }}">
 
 	  <body class="is-loading">
 
@@ -121,7 +121,7 @@
 {% endif %} -->
 
 		{% include footer.html %}
-		<script src="{{site.url}}/assets/js/home.js"></script>
+		<script src="{{ "assets/js/home.js" | absolute_url }}"></script>
 
     </body>
 

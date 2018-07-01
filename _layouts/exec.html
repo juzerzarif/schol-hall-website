@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<span class="image left"><img src="{{ site.url }}/assets/images/ashc-logo.png" /></span>{{ content }}
+<span class="image left"><img src="{{ "assets/images/ashc-logo.png" | absolute_url }}" /></span>{{ content }}
 
 <hr>
 
@@ -11,8 +11,8 @@ layout: page
     <div class="exec-item">
         <span class="image fit">
         <div class="image-container">
-            <object data="{{ site.url }}/{{ member.image }}">
-                <img src="{{ site.url }}/assets/images/exec/default.jpg" />
+            <object data="{{ member.image | absolute_url }}">
+                <img src="{{ "assets/images/exec/default.jpg" | absolute_url }}" />
             </object>
         </div>
         </span>

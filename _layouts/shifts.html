@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<link rel="stylesheet" href="{{site.url}}/assets/dist/css/lightbox.min.css">
+<link rel="stylesheet" href="{{ "assets/dist/css/lightbox.min.css" | absolute_url }}">
 
 {{ content }}
 
@@ -12,9 +12,9 @@ layout: page
 {% assign shift_pics = site.static_files | where: "shift-image", true %}
 {% for photo in shift_pics %}
 <div class="3u 6u(small)">
-        <a class="shift-image-link" href="{{site.url}}{{photo.path}}" data-lightbox="image-set">
+        <a class="shift-image-link" href="{{ photo.path | absolute_url }}" data-lightbox="image-set">
             <div class="image-container">
-                <img class="shift-image" src="{{site.url}}{{photo.path}}" />
+                <img class="shift-image" src="{{ photo.path | absolute_url }}" />
             </div>
         </a>
 </div>
@@ -35,7 +35,7 @@ layout: page
     }
 </style>
 
-<script src="{{site.url}}/assets/dist/js/lightbox-plus-jquery.min.js"></script>
+<script src="{{ "assets/dist/js/lightbox-plus-jquery.min.js" | absolute_url }}"></script>
 <script>
     lightbox.option({
         'wrapAround': true
