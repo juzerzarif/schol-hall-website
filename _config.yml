@@ -1,0 +1,41 @@
+# site settings
+title: Scholarship Halls
+subtitle: at the University of Kansas
+landing-title: KU Scholarship Halls
+email: ashc@gmail.com
+description: Allways wanting food. Russian blue kitty scratches couch bad kitty. Unwrap toilet paper. Cats making all the muffins ask for petting for cats go for world domination, lie on your belly and purr when you are asleep kick up litter but has closed eyes but still sees you. 
+bg_img: assets/images/bg.jpg
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://juzerzarif.com" # the base hostname & protocol for your site
+author:
+street_address: 1346 Louisiana St
+city: Lawrence
+state: KS
+zip_code: 66044
+country: United States of America
+phone: 
+
+# social settings
+500px_url:
+facebook_url: https://facebook.com
+github_url: 
+gitlab_url: 
+googleplus_url:
+instagram_url: https://instagram.com
+linkedin_url: 
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com
+
+# build settings
+markdown: kramdown
+
+#Static Files
+defaults:
+  - scope:
+      path: assets/images/shifts
+    values:
+      shift-image: true
+
+sass:
+  style: compressed

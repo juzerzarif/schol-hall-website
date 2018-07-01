@@ -1,0 +1,43 @@
+---
+layout: page
+---
+
+<link rel="stylesheet" href="{{site.url}}/assets/dist/css/lightbox.min.css">
+
+{{ content }}
+
+<hr>
+
+<div class="row">
+{% assign shift_pics = site.static_files | where: "shift-image", true %}
+{% for photo in shift_pics %}
+<div class="3u 6u(small)">
+        <a class="shift-image-link" href="{{site.url}}{{photo.path}}" data-lightbox="image-set">
+            <div class="image-container">
+                <img class="shift-image" src="{{site.url}}{{photo.path}}" />
+            </div>
+        </a>
+</div>
+{% endfor %}
+</div>
+
+<style>
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .image-container > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<script src="{{site.url}}/assets/dist/js/lightbox-plus-jquery.min.js"></script>
+<script>
+    lightbox.option({
+        'wrapAround': true
+    })
+</script>

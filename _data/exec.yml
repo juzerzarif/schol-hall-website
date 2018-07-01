@@ -1,0 +1,47 @@
+- position: President
+  name: Christian Espinosa
+  image: assets/images/exec/president.jpg
+
+- position: Vice President
+  name: Kiara Holtkamp
+  image: assets/images/exec/vice-president.jpg
+
+- position: Secretary
+  name: Kyle Berkley
+  image: assets/images/exec/secretary.jpg
+
+- position: Treasurer
+  name: William Lewis
+  image: assets/images/exec/treasurer.jpg
+
+- position: Community Service Chair
+  name: Mika Schrader
+  image: assets/images/exec/community-service.jpg
+
+- position: Environmental Chair
+  name: Nick Rose
+  image: assets/images/exec/environmental.jpg
+
+- position: Orientation and Recruitment Chair
+  name: Ashley Grande
+  image: assets/images/exec/or.jpg
+
+- position: Health and Wellness Chair
+  name: Nabil Hossain
+  image: assets/images/exec/health-wellness.jpg
+
+- position: Legacy Chair
+  name: Charlotte Muttai
+  image: assets/images/exec/legacy.jpg
+
+- position: Social Chair
+  name: Jason Mack
+  image: assets/images/exec/social.jpg
+
+- position: Student Senator
+  name: Luis Sanchez
+  image: assets/images/exec/senator.jpg
+
+- position: Diversity and Inclusion
+  name: AJ Gonzalez
+  image: assets/images/exec/di.jpg
