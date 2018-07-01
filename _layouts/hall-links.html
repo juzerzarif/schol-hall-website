@@ -11,7 +11,7 @@ layout: page
     <div class="4u 6u(small) butts">
         <div class="image-container">
             <a href="http://juzerzarif.com/stephenson-website-v2" target="_blank">
-            <img src="../assets/images/hall-photos/{{hall}}.jpg" alt="{{ hall }}"/>
+            <img src="../assets/images/hall-photos/{{hall | downcase}}.jpg" alt="{{ hall }}"/>
             <div class="image-overlay"><h4>{{hall}}</h4></div>
             </a>
         </div>
@@ -24,7 +24,7 @@ layout: page
     <div class="4u 6u(small) butts">
         <div class="image-container">
             <a href="{{ absolute_url }}" target="_blank">
-            <img src="../assets/images/hall-photos/{{hall}}.jpg" alt="{{ hall }}"/>
+            <img src="../assets/images/hall-photos/{{hall | downcase}}.jpg" alt="{{ hall }}"/>
             <div class="image-overlay"><h4>{{hall}}</h4></div>
             </a>
         </div>
