@@ -1,7 +1,12 @@
 
 # Scholarship Halls at KU
 
-A website for the scholarship hall community at the University of Kansas. `Under Production`
+A website for the scholarship hall community at the University of Kansas. 
+
+
+`Under Production`
+
+
 This website is not owned or operated by the University of Kansas and any views or opinions expressed do not necessarily reflect the views of the University of Kansas.
 
 # Credits
