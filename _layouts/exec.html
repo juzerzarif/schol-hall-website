@@ -10,11 +10,11 @@ layout: page
 {% for member in site.data.exec %}
     <div class="exec-item">
         <span class="image fit">
-        <div class="image-container">
-            <object data="{{ member.image | absolute_url }}">
-                <img src="{{ "assets/images/exec/default.jpg" | absolute_url }}" />
-            </object>
-        </div>
+            <div class="image-container">
+                <object class="front" data="{{ member.image | absolute_url }}">
+                    <img src="{{ "assets/images/exec/default.jpg" | absolute_url }}" />
+                </object>
+            </div>
         </span>
         <h4>{{ member.position }}</h4>
         {{ member.name }}
@@ -22,8 +22,8 @@ layout: page
     </div>
 {% endfor %}
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 </div>
 
 <style>
@@ -41,51 +41,11 @@ layout: page
             grid-template-columns: 1fr;
             padding: 0 1rem;
         }
-        .exec-container > a {
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: -1rem;
-            width: 30%;
-            height: 10rem;
-            line-height: 10rem;
-            z-index: 10000;
-            border-bottom: none;
-            font-size: 2rem;
-        }
-        .exec-container > a:last-of-type {
-            left: calc(70% + 1rem);
-            text-align: end;
-        }
-        .exec-item {
-            display: none;
-            transition: all 0.5s;
-        }
-        .exec-item.active {
-            display: block;
-            transition: all 0.5s;
-        }
     }
     .exec-item {
         padding: 1rem 1rem;
         border: 2px solid #eeeeee;
         text-align: center;
-        animation: fade 1s ease;
-        -webkit-animation: fade 1s ease;
-        -moz-animation: fade 1s ease;
-    }
-    @-webkit-keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-    }
-    @-moz-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1;}
-    }
-    @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
     }
         .exec-item > h3, .exec-item > h4 {
             text-align: center;
@@ -96,60 +56,31 @@ layout: page
         }
 
     .image-container {
+        transition: all 0.5s;
         width: 100%;
-        position: relative;
         padding-bottom: 100%;
         border-radius: 50%;
+        position: relative;
         overflow: hidden;
     }
-        .image-container > object, .image-container > img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            top: 0;
-            left: 0;
-            transition: all 0.5s;
-        }
-        .image-container:hover > object, .image-container:hover > img {
-            transform: scale(1.1);
-        }
+    .image-container > object {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.5s;
+    }
+    .image-container:hover > object {
+        transform: scale(1.1);
+    }
     .exec-container > p {
         font-size: 0.75rem;
     }
 </style>
 
 <script>
-    var slideIndex = 1;
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("exec-item");
-        if (n > slides.length) {slideIndex = 1} 
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("active"); 
-        }
-        slides[slideIndex-1].classList.add("active"); 
-    }
-
-    function addListenerMulti(el, s, fn) {
-        s.split(' ').forEach(e => el.addEventListener(e, fn, false));
-    }
-
-    addListenerMulti(window, "load resize", function() {
-        var earray = document.getElementsByClassName("exec-item");
-        earray[0].classList.add("active");
-        for(var i=1; i<earray.length; i++) {
-            earray[i].classList.remove("active");
-        }
-    });
-
-
-
+    
 </script>

@@ -36,6 +36,10 @@ defaults:
       path: assets/images/shifts
     values:
       shift-image: true
+  - scope:
+      path: assets/images/dining
+    values:
+      dining-image: true
 
 sass:
   style: compressed

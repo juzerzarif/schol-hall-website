@@ -9,12 +9,12 @@ layout: page
 <hr>
 
 <div class="row">
-{% assign shift_pics = site.static_files | where: "shift-image", true %}
-{% for photo in shift_pics %}
+{% assign dining_pics = site.static_files | where: "dining-image", true %}
+{% for photo in dining_pics %}
 <div class="3u 6u(small)">
-        <a class="shift-image-link" href="{{ photo.path | absolute_url }}" data-lightbox="image-set">
+        <a class="dining-image-link" href="{{ photo.path | absolute_url }}" data-lightbox="image-set">
             <div class="image-container">
-                <img class="shift-image" src="{{ photo.path | absolute_url }}" />
+                <img class="dining-image" src="{{ photo.path | absolute_url }}" />
             </div>
         </a>
 </div>
