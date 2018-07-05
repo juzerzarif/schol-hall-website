@@ -41,5 +41,12 @@ defaults:
     values:
       dining-image: true
 
+#Plugins
+plugins: [jekyll-paginate]
+
+#Paginate
+paginate: 6
+paginate_path: /newsletter/page:num/
+
 sass:
   style: compressed

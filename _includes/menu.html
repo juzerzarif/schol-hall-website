@@ -11,6 +11,7 @@
 				{% endif %}
 			{% endfor %}
 		{% endfor %}
+		<li {% if current_page contains "newsletter" %} class="active" {% endif %}><a href="{{ "newsletter/" | absolute_url }}">Newsletter</a></li>
 		</ul>
 
 		<ul class="icons">
