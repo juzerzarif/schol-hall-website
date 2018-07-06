@@ -18,17 +18,56 @@ layout: page
 {% endfor %}
 </section>
 
-<div class="pagination">
-                 {% if paginator.previous_page %}
-                 <a href="{{ paginator.previous_page_path | absolute_url }}" class="previous">Previous</a>
-                 {% else %}
-                 <span class="previous">Previous</span>
-                 {% endif %}
-                 <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-                 {% if paginator.next_page %}
-                 <a href="{{ paginator.next_page_path | absolute_url }}" class="next">Next</a>
-                 {% else %}
-                 <span class="next ">Next</span>
-                 {% endif %}
-                 </div>
+<!-- <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | absolute_url }}" class="previous">Previous</a>
+    {% else %}
+    <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | absolute_url }}" class="next">Next</a>
+    {% else %}
+    <span class="next ">Next</span>
+    {% endif %}
+</div> -->
+
+{% if paginator.total_pages > 1 %}
+<div class="page-links">
+    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | absolute_url }}">&lsaquo;</a>{% else %}<span>&lsaquo;</span>{% endif %}
+    {% for i in (1..paginator.total_pages) %}
+        {% if i == 1 %}
+        <a href="{{ "newsletter/" | absolute_url }}" {% if paginator.page==i %}class="active"{% endif %}>{{ i }}</a>
+        {% else %}
+        <a href="{{ site.paginate_path | absolute_url | replace: ':num', paginator.page }}" {% if paginator.page==i %}class="active"{% endif %}>{{ i }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | absolute_url }}">&rsaquo;</a>{% else %}<span>&rsaquo;</span>{% endif %}
+</div>
+{% endif %}
+
+<style>
+    .page-links {
+        display: grid;
+        grid-template-columns: repeat(10, 2rem);
+    }
+    .page-links > * {
+        border-left: 2px solid #eeeeee;
+        border-top: 2px solid #eeeeee;
+        border-bottom: 2px solid #eeeeee;
+        text-align: center;
+    }
+    .page-links > *:last-child {
+        border-right: 2px solid #eeeeee;
+    }
+    .page-links > a:hover {
+        border-bottom: 2px solid #eeeeee;
+    }
+    .page-links > span {
+        color: #eeeeee;
+    }
+    .active {
+        background-color: #f5f5f5;
+    }
+</style>
               
