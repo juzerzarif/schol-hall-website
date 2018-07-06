@@ -39,7 +39,7 @@ layout: page
         {% if i == 1 %}
         <a href="{{ "newsletter/" | absolute_url }}" {% if paginator.page==i %}class="active"{% endif %}>{{ i }}</a>
         {% else %}
-        <a href="{{ site.paginate_path | absolute_url | replace: ':num', paginator.page }}" {% if paginator.page==i %}class="active"{% endif %}>{{ i }}</a>
+        <a href="{{ site.paginate_path | absolute_url | replace: ':num', i }}" {% if paginator.page==i %}class="active"{% endif %}>{{ i }}</a>
         {% endif %}
     {% endfor %}
     {% if paginator.next_page %}<a href="{{ paginator.next_page_path | absolute_url }}">&rsaquo;</a>{% else %}<span>&rsaquo;</span>{% endif %}
@@ -49,7 +49,8 @@ layout: page
 <style>
     .page-links {
         display: grid;
-        grid-template-columns: repeat(10, 2rem);
+        grid-template-columns: repeat(auto-fit, 2rem);
+        justify-content: center;
     }
     .page-links > * {
         border-left: 2px solid #eeeeee;
