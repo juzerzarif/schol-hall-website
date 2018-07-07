@@ -26,6 +26,12 @@ layout: page
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    @media screen and (max-width: 736px) {
+        .posts {
+            grid-template-columns: 1fr;
+        }
     }
     .posts > article {
         padding: 1rem 1rem;
