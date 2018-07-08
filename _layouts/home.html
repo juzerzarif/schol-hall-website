@@ -40,12 +40,6 @@
 				</div>
 			</div>
 
-			<!-- <div class="row">
-				<div class="iframe-container" id="iframe-container">-->
-					<!-- <iframe src="https://www.youtube.com/embed/20u-d4erhno?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-				<!--</div>
-			</div> -->
-
 			{% if page.embed-video %}
 			<div class="row">
 				<div class="youtube" data-embed="{{ page.embed-link }}">
@@ -56,69 +50,30 @@
 			</div>
 			{% endif %}
 
-            <!-- {% if site.posts != null %}-->
+            {% if site.posts != null %}
 
 				    <!-- Posts -->
-				  <!--  <section class="posts">
-	              {% for post in site.posts %}
-						    <article>
-								    <header>
-										    <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-										<h2><a href="{{ post.url  | relative_url }}">{{ post.title }}</a></h2>
-								</header>
-								<a href="{{ post.url  | relative_url }}" class="image fit"><img src="{{ post.image }}" alt="" /></a>
-								<p>{{ post.excerpt }}</p>
-								<ul class="actions">
-										<li><a href="{{ post.url  | relative_url }}" class="button">Full Story</a></li>
-								</ul>
-						</article>
-	          {% endfor %}
-				</section>-->
+			<section class="posts row">
+			{% for post in site.posts limit: 2 %}
+				<article class="6u 12u$(small)">
+					<header>
+						<span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+						<h2><a href="{{ post.url  | absolute_url }}">{{ post.title }}</a></h2>
+					</header>
+					{% if post.description %}<i>{{ post.description }}</i>{% endif %}
+					{% if post.image %}<a href="{{ post.url  | absolute_url }}" class="image-container"><img src="{{ post.image | absolute_url }}" alt="" /></a>{% endif %}
+					<ul class="actions">
+						<li><a href="{{ post.url  | absolute_url }}" class="button special">Read More</a></li>
+					</ul>
+				</article>
+			{% endfor %}
+			</section>
 
+			<section class="post-button">
+				<a href="{{ "newsletter/" | absolute_url }}" class="button">Newsletter</a>
+			</section>
 
-        <!-- Footer -->
-        <!--<footer>
-		        <div class="pagination">-->
-				        <!--<a href="#" class="previous">Prev</a>-->
-				        <!--<a href="#" class="page active">1</a>
-				        <a href="#" class="page">2</a>
-				        <a href="#" class="page">3</a>
-				        <span class="extra">&hellip;</span>
-				        <a href="#" class="page">8</a>
-				        <a href="#" class="page">9</a>
-				        <a href="#" class="page">10</a>
-				        <a href="#" class="next">Next</a>
-		        </div>-->
-
-            <!-- This loops through the paginated posts -->
-            <!-- {% for post in paginator.posts %}
-                 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                 <p class="author">
-                 <span class="date">{{ post.date }}</span>
-                 </p>
-                 <div class="content">
-                 {{ post.content }}
-                 </div>
-                 {% endfor %} -->
-
-            <!-- Pagination links -->
-            <!-- <div class="pagination">
-                 {% if paginator.previous_page %}
-                 <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-                 {% else %}
-                 <span class="previous">Previous</span>
-                 {% endif %}
-                 <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-                 {% if paginator.next_page %}
-                 <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-                 {% else %}
-                 <span class="next ">Next</span>
-                 {% endif %}
-                 </div>
-               -->
-        <!--</footer>
-
-{% endif %} -->
+			{% endif %}
 
 		{% include footer.html %}
 		<script src="{{ "assets/js/home.js" | absolute_url }}"></script>
