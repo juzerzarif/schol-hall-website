@@ -14,7 +14,7 @@ layout: page
 <div class="3u 6u(small)">
         <a class="shift-image-link" href="{{ photo.path | absolute_url }}" data-lightbox="image-set">
             <div class="image-container">
-                <img class="shift-image" src="{{ photo.path | absolute_url }}" />
+                <img class="js-lazy-image" class="shift-image" data-src="{{ photo.path | absolute_url }}" />
             </div>
         </a>
 </div>

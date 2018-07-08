@@ -61,7 +61,7 @@ for (var i = 0; i < youtube.length; i++) {
         image.addEventListener( "load", function() {
             youtube[ i ].appendChild( image );
         }( i ) );
-    
+        
         youtube[i].addEventListener( "click", function() {
 
         var iframe = document.createElement( "iframe" );

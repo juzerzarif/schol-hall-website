@@ -14,7 +14,7 @@ layout: page
 <div class="3u 6u(small)">
         <a class="dining-image-link" href="{{ photo.path | absolute_url }}" data-lightbox="image-set">
             <div class="image-container">
-                <img class="dining-image" src="{{ photo.path | absolute_url }}" />
+                <img class="js-lazy-image" class="dining-image" data-src="{{ photo.path | absolute_url }}" />
             </div>
         </a>
 </div>

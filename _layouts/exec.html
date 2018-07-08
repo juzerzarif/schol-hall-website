@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<span class="image left"><img src="{{ "assets/images/ashc-logo.png" | absolute_url }}" /></span>{{ content }}
+<span class="image left"><img class="js-lazy-image" data-src="{{ "assets/images/ashc-logo.png" | absolute_url }}" /></span>{{ content }}
 
 <hr>
 
@@ -12,7 +12,7 @@ layout: page
         <span class="image fit">
             <div class="image-container">
                 <object class="front" data="{{ member.image | absolute_url }}">
-                    <img src="{{ "assets/images/exec/default.jpg" | absolute_url }}" />
+                    <img class="js-lazy-image" data-src="{{ "assets/images/exec/default.jpg" | absolute_url }}" />
                 </object>
             </div>
         </span>
