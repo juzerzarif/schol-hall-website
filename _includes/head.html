@@ -4,4 +4,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" />
 		<noscript><link rel="stylesheet" href="{{ 'assets/css/noscript.css' | relative_url }}" /></noscript>
+		{% if page.layout == "shifts" or page.layout == "dining" or page.layout == "post" %}
+		<link rel="stylesheet" type="text/css" href="{{ "assets/css/slick.css" | absolute_url }}"/>
+		<link rel="stylesheet" type="text/css" href="{{ "assets/css/slick-theme.css" | absolute_url }}"/>
+		<style>
+			.carousel-image {
+				max-height: 80vh;
+				max-width: 100%;
+				margin: 0 auto;
+				padding: 0 2px;
+			}
+			@media screen and (max-width: 736px) {
+				.slick-prev:before, .slick-next:before {
+					color: white;
+				}
+			}
+			.slick-dots > li > button {
+				border-radius: 50%;
+			} 
+			.slick-dots > li > button[aria-selected=true] {
+				border-radius: 50%;
+				background-color: #212931;
+			}
+		</style>
+		{% endif %}
 </head>

@@ -94,3 +94,15 @@
 		<script src="{{ "assets/js/util.js" | absolute_url }}"></script>
 		<script src="{{ "assets/js/main.js" | absolute_url }}"></script>
 		<script src="{{ "assets/js/lazy-load.js" | absolute_url }}"></script>
+		{% if page.layout == "shifts" or page.layout == "dining" or page.layout == "post" %}
+		<script src="{{ "assets/js/slick.js" | absolute_url }}"></script>
+		<script>
+			$(document).ready(function(){
+				$('.slick-carousel').slick({
+					dots: true,
+					adaptiveHeight: true,
+					lazyLoad: 'progressive'
+				});
+			});
+		</script>
+		{% endif %}
