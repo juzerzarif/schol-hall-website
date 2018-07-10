@@ -14,3 +14,11 @@ layout: page
     </div>
 {% endfor %}
 </div>
+
+<div class="slick-nav">
+    {% for photo in shift_pics %}
+    <div class="nav-container">    
+        <img data-lazy="{{ photo.path | absolute_url }}" />
+    </div>
+    {% endfor %}
+</div>

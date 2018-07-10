@@ -100,8 +100,15 @@
 			$(document).ready(function(){
 				$('.slick-carousel').slick({
 					dots: true,
-					adaptiveHeight: true,
-					lazyLoad: 'progressive'
+					// adaptiveHeight: true,
+					lazyLoad: 'ondemand',
+					asNavFor: '.slick-nav'
+				});
+				$('.slick-nav').slick({
+					asNavFor: '.slick-carousel',
+					slidesToShow: 5,
+					centerMode: true,
+					arrows: false
 				});
 			});
 		</script>

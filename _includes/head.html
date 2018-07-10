@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ "assets/css/slick-theme.css" | absolute_url }}"/>
 		<style>
 			.carousel-image {
-				max-height: 80vh;
+				max-height: 70vh;
 				max-width: 100%;
 				margin: 0 auto;
 				padding: 0 2px;
@@ -18,6 +18,20 @@
 				.slick-prev:before, .slick-next:before {
 					color: white;
 				}
+			}
+			.nav-container {
+				position: relative;
+				padding-bottom: 100%;
+			}
+			.nav-container > img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				object-position: center;
+				padding: 4px 4px;
 			}
 			.slick-dots > li > button {
 				border-radius: 50%;
