@@ -104,12 +104,26 @@
 					lazyLoad: 'ondemand',
 					asNavFor: '.slick-nav'
 				});
-				$('.slick-nav').slick({
-					asNavFor: '.slick-carousel',
-					slidesToShow: 5,
-					centerMode: true,
-					arrows: false
-				});
+				if(screen.width < 736) {
+					$('.slick-nav').slick({
+						asNavFor: '.slick-carousel',
+						slidesToShow: 3,
+						centerMode: true,
+						arrows: false,
+						focusOnSelect: true,
+						lazyLoad: 'ondemand'
+					});
+				}
+				else {
+					$('.slick-nav').slick({
+						asNavFor: '.slick-carousel',
+						slidesToShow: 7,
+						centerMode: true,
+						arrows: false,
+						focusOnSelect: true,
+						lazyLoad: 'ondemand'
+					});
+				}
 			});
 		</script>
 		{% endif %}
