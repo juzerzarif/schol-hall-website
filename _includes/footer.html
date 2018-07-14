@@ -102,14 +102,15 @@
 					dots: true,
 					// adaptiveHeight: true,
 					lazyLoad: 'ondemand',
-					asNavFor: '.slick-nav'
+					asNavFor: '.slick-nav',
+					arrows: false
 				});
 				if(screen.width < 736) {
 					$('.slick-nav').slick({
 						asNavFor: '.slick-carousel',
 						slidesToShow: 3,
 						centerMode: true,
-						arrows: false,
+						// arrows: false,
 						focusOnSelect: true,
 						lazyLoad: 'ondemand'
 					});
@@ -119,7 +120,7 @@
 						asNavFor: '.slick-carousel',
 						slidesToShow: 7,
 						centerMode: true,
-						arrows: false,
+						// arrows: false,
 						focusOnSelect: true,
 						lazyLoad: 'ondemand'
 					});
