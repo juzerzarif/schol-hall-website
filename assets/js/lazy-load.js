@@ -1,7 +1,7 @@
 // Get all of the images that are marked up to lazy load
 const images = document.querySelectorAll('.js-lazy-image');
-console.log("lazy-load acquired images");
-console.log(images);
+// console.log("lazy-load acquired images");
+// console.log(images);
 const config = {
   // If the image gets within 50px in the Y axis, start the download.
   rootMargin: '50px 0px',
@@ -47,8 +47,8 @@ function fetchImage(url) {
  * @param {object} image 
  */
 function preloadImage(image) {
-    console.log(image.dataset.src);
-    console.log("Load image");
+    // console.log(image.dataset.src);
+    // console.log("Load image");
   const src = image.dataset.src;
   if (!src) {
     return;
