@@ -29,6 +29,7 @@ twitter_url: https://twitter.com
 
 # build settings
 markdown: kramdown
+highlighter: true
 
 #Static Files
 defaults:
@@ -36,6 +37,14 @@ defaults:
       path: assets/images/shifts
     values:
       shift-image: true
+  - scope:
+      path: assets/images/thumbs/shifts
+    values:
+      shift-thumbnail: true
+  - scope:
+      path: assets/images/thumbs/dining
+    values:
+      dining-thumbnail: true
   - scope:
       path: assets/images/dining
     values:

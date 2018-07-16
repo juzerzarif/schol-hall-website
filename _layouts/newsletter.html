@@ -2,6 +2,7 @@
 layout: page
 ---
 
+{% if site.posts.size > 0 %}
 <section class="posts">
 {% for post in paginator.posts %}
     <article>
@@ -34,7 +35,7 @@ layout: page
         }
     }
     .posts > article {
-        padding: 1rem 1rem;
+        padding: 2rem 2rem;
         border: 2px solid #eeeeee;
     }
     header > h2 {
@@ -70,3 +71,7 @@ layout: page
     }
     
 </style>
+
+{% else %}
+    <p style="text-align: center">Content Coming Soon!</p>
+{% endif %}

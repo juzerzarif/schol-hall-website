@@ -2,44 +2,24 @@
 layout: page
 ---
 
-<link rel="stylesheet" href="{{ "assets/dist/css/lightbox.min.css" | absolute_url }}">
-
 {{ content }}
 
 <hr>
 
-<div class="row">
+<div class="slick-carousel">
 {% assign dining_pics = site.static_files | where: "dining-image", true %}
+{% assign dining_thumbs = site.static_files | where: "dining-thumbnail", true %}
 {% for photo in dining_pics %}
-<div class="3u 6u(small)">
-        <a class="dining-image-link" href="{{ photo.path | absolute_url }}" data-lightbox="image-set">
-            <div class="image-container">
-                <img class="js-lazy-image" class="dining-image" data-src="{{ photo.path | absolute_url }}" />
-            </div>
-        </a>
-</div>
+    <div class="image-container">
+        <img class="carousel-image" data-lazy="{{ photo.path | absolute_url }}" />
+    </div>
 {% endfor %}
 </div>
 
-<style>
-    .image-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 100%;
-        margin-bottom: 1.5rem;
-    }
-    .image-container > img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-</style>
-
-<script src="{{ "assets/dist/js/lightbox-plus-jquery.min.js" | absolute_url }}"></script>
-<script>
-    lightbox.option({
-        'wrapAround': true
-    })
-</script>
+<div class="slick-nav">
+    {% for photo in dining_thumbs %}
+    <div class="nav-container">    
+        <img data-lazy="{{ photo.path | absolute_url }}" />
+    </div>
+    {% endfor %}
+</div>

@@ -8,6 +8,7 @@ layout: page
 
 <div class="slick-carousel">
 {% assign shift_pics = site.static_files | where: "shift-image", true %}
+{% assign shift_thumbs = site.static_files | where: "shift-thumbnail", true %}
 {% for photo in shift_pics %}
     <div class="image-container">
         <img class="carousel-image" data-lazy="{{ photo.path | absolute_url }}" />
@@ -16,7 +17,7 @@ layout: page
 </div>
 
 <div class="slick-nav">
-    {% for photo in shift_pics %}
+    {% for photo in shift_thumbs %}
     <div class="nav-container">    
         <img data-lazy="{{ photo.path | absolute_url }}" />
     </div>
