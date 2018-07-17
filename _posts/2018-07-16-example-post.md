@@ -1,4 +1,4 @@
 ---
-published: false
+published: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique porta erat, non dignissim mi. Nam quis lacus non lectus rhoncus convallis. Suspendisse venenatis, elit et semper mollis, orci magna scelerisque elit, eu ultrices quam odio at quam. Proin arcu nunc, consequat ut convallis sed, iaculis in leo. Praesent vitae mi risus. Proin id iaculis leo, ut malesuada risus. Etiam purus lectus, consectetur sed facilisis sed, mollis non dui. Nunc tristique sapien sit amet augue volutpat, sit amet vulputate odio condimentum. In sagittis ullamcorper ullamcorper. Sed ex sem, faucibus vel libero non, pulvinar fermentum urna. Praesent rutrum risus non fringilla sodales. Morbi a hendrerit ante, a cursus nisl. Nulla ac erat pulvinar, semper massa et, ullamcorper justo. Pellentesque rutrum feugiat justo vel imperdiet.
