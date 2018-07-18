@@ -41,6 +41,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
 }
 .image-container:hover > a > .image-overlay {
     opacity: 1;
